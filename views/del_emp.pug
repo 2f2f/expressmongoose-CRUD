@@ -1,0 +1,12 @@
+extends layout
+block content
+    div(class='container-fluid')
+        div(class='panel panel-default')
+            div(class='panel-heading') 
+                h2 Select Employee to delete
+            div(class='panel-body')
+                ul 
+                    each ename in data
+                        li
+                            a(href='/del/' + ename.name) #{ename.name}
+    

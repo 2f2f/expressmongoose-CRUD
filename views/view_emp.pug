@@ -1,0 +1,17 @@
+extends layout
+block content
+    div(class='container-fluid')
+        div(class='panel panel-default')
+            div(class='panel-heading') 
+                h2 Employee List
+            div(class='panel-body')
+                ul 
+                    each ename in data
+                        li
+                            a(href='/view/' + ename.name) #{ename.name}
+            
+
+   
+
+    
+    

@@ -1,0 +1,18 @@
+extends layout
+block content
+    h4 Edit Employee
+    form(action=' ' method='POST')
+        div(class="form-group")
+            label(for="emp_dept") Employee Dept
+            input(type="text" class="form-control" name="emp_dept")
+        div(class="form-group")
+            label(for="emp_leaves") Assigned leaves
+            input(type="text" class="form-control" name="emp_leaves")
+        div(class="form-group")
+            label(for="manager") Manager
+            input(type="text" class="form-control" name="manager")
+        button(type="submit" class="btn btn-default") Edit
+    if errors 
+        ul
+            for error in errors
+                li!= error.msg

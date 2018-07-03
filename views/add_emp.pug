@@ -1,0 +1,20 @@
+extends layout
+block content
+    form(action=' ' method='POST')
+        div(class="form-group")
+            label(for="emp_name") Employee Name
+            input(type="text" class="form-control" name="emp_name")
+        div(class="form-group")
+            label(for="emp_dept") Employee Dept
+            input(type="text" class="form-control" name="emp_dept")
+        div(class="form-group")
+            label(for="emp_leaves") Assigned leaves
+            input(type="text" class="form-control" name="emp_leaves")
+        div(class="form-group")
+            label(for="manager") Manager
+            input(type="text" class="form-control" name="manager")
+        button(type="submit" class="btn btn-default") Submit
+    if errors 
+        ul
+            for error in errors
+                li!= error.msg

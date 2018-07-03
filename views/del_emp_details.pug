@@ -1,0 +1,5 @@
+extends layout
+block content
+    h4 Are You sure you want to delete #{data.name} ?
+    form(action=" " method="POST")
+        button(type="submit" class="btn btn-default") Delete
